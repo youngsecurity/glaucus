@@ -1,0 +1,10 @@
+<botcomponent schemaname="ztgpt_ZTCopilot.componentzta-nist-sp-1800-35a-preliminary-draft-2.pdf_1357">
+  <componenttype>14</componenttype>
+  <filedata mimetype="application/pdf">zta-nist-sp-1800-35a-preliminary-draft-2.pdf</filedata>
+  <iscustomizable>1</iscustomizable>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

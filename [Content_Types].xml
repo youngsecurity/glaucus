@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+    <Default Extension="xml" ContentType="application/octet-stream" />
+    <Default Extension="pdf" ContentType="application/octet-stream" />
+    <Default Extension="json" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.UnrecognizedSpeech/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ConversationStart/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.LeadGenerationContactDetails/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ResetConversation/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.entity.linesofbusiness/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Escalate/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Collecttheuseremailaddress/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Lesson2/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ZTS-whatiszts/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Silence/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.entity.moreinfo/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Fallback/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ZTS-WhatdoesabbreviationZTmean/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Goodbye/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.entity.ZTHighleveldefinition/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.AdaptiveCardTest/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.gpt.default/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ZTS-ZTMaturityAssessment/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ZTS-ZTdefinition/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ThankYou/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.entity.ZTdefinition/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.StartOver/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.knowledge.PublicSiteSearchSource.0/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Lesson1/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Greeting/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Lesson3/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.entity.consultantcontact/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.MultipleTopicsMatched/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.entity.YesNo/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.howcanztshelp-linesofbusiness/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Search/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.Signin/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.EndofConversation/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.MyfirstZTAsteps/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.ZTS-Whatisyourname/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.OnError/data" ContentType="application/octet-stream" />
+    <Override PartName="/botcomponents/crf4c_devCopilot.topic.UnknownDtmfKey/data" ContentType="application/octet-stream" />
+</Types>

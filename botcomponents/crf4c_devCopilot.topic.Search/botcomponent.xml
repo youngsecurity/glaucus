@@ -1,0 +1,11 @@
+<botcomponent schemaname="crf4c_devCopilot.topic.Search">
+  <componenttype>9</componenttype>
+  <description>Create generative answers from knowledge sources.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Conversational boosting (Patrick)</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>1</statecode>
+  <statuscode>2</statuscode>
+</botcomponent>

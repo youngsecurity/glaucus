@@ -1,0 +1,11 @@
+<botcomponent_msdyn_aimodelset>
+  <botcomponent_msdyn_aimodel botcomponentid.schemaname="crf4c_devCopilot.topic.EndofConversation" msdyn_aimodelid.msdyn_aimodelid="92addca6-ed0d-4de0-8608-354de2a34975">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_msdyn_aimodel>
+  <botcomponent_msdyn_aimodel botcomponentid.schemaname="crf4c_devCopilot.topic.EndofConversation" msdyn_aimodelid.msdyn_aimodelid="db617e8d-0801-469b-bfac-190962ba309d">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_msdyn_aimodel>
+  <botcomponent_msdyn_aimodel botcomponentid.schemaname="crf4c_devCopilot.topic.Search" msdyn_aimodelid.msdyn_aimodelid="5ab146ec-2eeb-48f5-a983-ed594385c7d7">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_msdyn_aimodel>
+</botcomponent_msdyn_aimodelset>

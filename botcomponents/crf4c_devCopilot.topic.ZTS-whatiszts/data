@@ -1,0 +1,36 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - what is zts?
+      - define zts for me?
+      - explain the abbreviation ZTS?
+
+  actions:
+    - kind: SendActivity
+      id: sendActivity_WwdLx0
+      activity:
+        text:
+          - |-
+            Ahh good question - ZTS is just short for ZTSolutions - i.e. Zero Trust Solutions.
+            
+            It is a bespoke consulting company that helps companies plan, design and build their zero trust architecture.
+          - "Simple: **ZTS = Zero Trust Solutions**. It's a consultancy that is focused on helping companies realize zero trust architectures."
+          - **ZTS = ZTsolutions**, a team of consultants who can help you Know, Empower and Solve your zero trust journey.
+
+    - kind: SendActivity
+      id: sendActivity_bfdUyN
+      activity:
+        text:
+          - |-
+            ZTS are set up to do three things:
+            
+            1. **Know** - they bring companies the latest industry leading consulting expertise to do zero trust maturity assessments, build ZT transformation strategies and more
+            2. **Empower** - if you are an enterprise with a ZT plan already, they can help you implement with contracted or project based skilled zero trust resources
+            3. **Solve** - ZTS have a carefully curated set of zero trust solutions in their portfolio. All of them are vetted by their consultants and lab engineers to make sure they implement zero trust principles.
+          - "ZTS has three lines of business: **Know. Empower and Solve.** These help organizations by providing consulting, contracting and proven zero trust technolgy solutions, respectively."
+
+    - kind: EndConversation
+      id: cYVdQN

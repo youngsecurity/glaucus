@@ -1,0 +1,10 @@
+kind: ClosedListEntity
+items:
+  - id: HoJEx4
+    displayName: Trust but Verify
+
+  - id: ENtUwP
+    displayName: Verify then Trust
+
+  - id: LWAlvp
+    displayName: Verify then Trust, then Keep Verifying

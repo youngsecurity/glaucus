@@ -1,0 +1,11 @@
+<botcomponent schemaname="crf4c_devCopilot.topic.Greeting">
+  <componenttype>9</componenttype>
+  <description>This topic is triggered when the user greets the copilot.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Greeting</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

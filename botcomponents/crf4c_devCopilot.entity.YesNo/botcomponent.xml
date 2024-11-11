@@ -1,0 +1,10 @@
+<botcomponent schemaname="crf4c_devCopilot.entity.YesNo">
+  <componenttype>11</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>Yes No</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

@@ -1,0 +1,162 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - what does ZTS do?
+      - what does ZTsolutions do?
+      - what services does ZTS provide?
+      - does zero trust solutions do anything?
+      - do zero trust solutions LTD provide consulting services?
+      - can ZTS help me with my ZTA?
+      - can ZTS help me with my contracting needs?
+      - can ZTS help me find a good zero trust design pattern?
+      - can zero trust solutions solve my problems?
+      - zero trust solutions services
+      - services
+      - what do you do?
+      - how can zts help me?
+
+  actions:
+    - kind: SendActivity
+      id: sendActivity_HMNnqS
+      activity:
+        text:
+          - I can help you with Zero Trust guidance and scheduling a meeting with ZTSolutions.io consultants. 
+          - I can help introduce you to a ZTSolutions.io (ZTS) consultant and help you learn more about ZT Solutions.
+
+    - kind: Question
+      id: question_PuATuh
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.moreinfolob
+      prompt: Do you want to know more about what they do?
+      entity:
+        kind: ClosedListEntityReference
+        entityId: crf4c_devCopilot.entity.moreinfo
+        selectedItems:
+          - pPdLyd
+          - f9wy73
+
+    - kind: ConditionGroup
+      id: conditionGroup_aYmZL8
+      conditions:
+        - id: conditionItem_Z1IhYg
+          condition: =Topic.moreinfolob = 'crf4c_devCopilot.entity.moreinfo'.f9wy73
+          actions:
+            - kind: SendActivity
+              id: sendActivity_ODV9Le
+              activity:
+                text:
+                  - |-
+                    ZTS are set up to do three things:
+                    1. **Know** - they bring companies the latest industry leading consulting expertise to do zero trust maturity assessments, build ZT transformation strategies and more
+                    2. **Empower** - if you are an enterprise with a ZT plan already, they can help you implement with contracted or project based skilled zero trust resources
+                    3. **Solve** - ZTS have a carefully curated set of zero trust solutions in their portfolio. All of them are vetted by their consultants and lab engineers to make sure they implement zero trust principles.
+                  - |-
+                    ZTS has three lines of business: **Know. Empower and Solve.**
+                    
+                    These help organizations by providing **consulting**, **contracting** and **proven zero trust technology solutions**, respectively.
+
+      elseActions:
+        - kind: BeginDialog
+          id: rT8xvo
+          dialog: crf4c_devCopilot.topic.EndofConversationdraft
+
+    - kind: Question
+      id: question_9WwyVP
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.lineofbus
+      prompt: Do you want to know more about one of these?
+      entity:
+        kind: ClosedListEntityReference
+        entityId: crf4c_devCopilot.entity.linesofbusiness
+        selectedItems:
+          - vPbCDB
+          - OOpUVK
+          - vqxliq
+
+    - kind: ConditionGroup
+      id: conditionGroup_YAkxQ3
+      conditions:
+        - id: conditionItem_sW560f
+          condition: =Topic.lineofbus = 'crf4c_devCopilot.entity.linesofbusiness'.vPbCDB
+          actions:
+            - kind: SendActivity
+              id: sendActivity_LRGAdt
+              activity: |-
+                ZTSolution's consulting services help advise businesses on the best course of action from start to finish on their zero trust journey. This could be any or all of:
+                - Zero Trust workshops to co-create your strategy
+                - Zero Trust training to baseline your understanding of what zero trust is across your team
+                - Zero Trust maturity assessements aligned to NIST, CISA and NCSC-UK
+
+            - kind: SendActivity
+              id: sendActivity_kyIglE
+              activity: |-
+                Check out the info page here https://ztsolutions.io/services/know
+                
+                Or you can ask them to contact you here
+                https://ztsolutions.io/contact-us
+
+      elseActions:
+        - kind: ConditionGroup
+          id: conditionGroup_5stHtH
+          conditions:
+            - id: conditionItem_KKCHtb
+              condition: =Topic.lineofbus = 'crf4c_devCopilot.entity.linesofbusiness'.OOpUVK
+              actions:
+                - kind: SendActivity
+                  id: sendActivity_ZNA8c5
+                  activity: |-
+                    ZTsolution's Empower resourcing line of business provides organizations rapid access to skilled people to help deliver on existing zero trust transformation projects. This might be:
+                    
+                    - zero trust security architects
+                    - security and cloud engineers for ZTNA or microsegmentation projects, 
+                    - or programme and project managers, 
+                    
+                    ... or many other diverse skillsets.
+
+                - kind: SendActivity
+                  id: sendActivity_tTXQCz
+                  activity: |-
+                    Check out the info page here https://ztsolutions.io/services/empower
+                    
+                    Or you can ask them to contact you here
+                    https://ztsolutions.io/contact-us
+
+          elseActions:
+            - kind: ConditionGroup
+              id: conditionGroup_zM7C9Y
+              conditions:
+                - id: conditionItem_56C64U
+                  condition: =Topic.lineofbus = 'crf4c_devCopilot.entity.linesofbusiness'.vqxliq
+                  actions:
+                    - kind: SendActivity
+                      id: sendActivity_DcOjPn
+                      activity: |-
+                        The Solve side of ZTS is all about giving you an accelerated understanding of which vendor solutions are vetted and proven to work to underpin a Zero Trust Architecture.
+                        
+                        ZTS's Zero Trust consultants have already assessed and lab tested all the solutions in their portfolio to ensure they are Zero Trust capable.
+
+                    - kind: SendActivity
+                      id: sendActivity_bpPOZ2
+                      activity: |-
+                        Check out the info page here https://ztsolutions.io/services/solve
+                        
+                        Or you can ask them to contact you here
+                        https://ztsolutions.io/contact-us
+
+              elseActions:
+                - kind: SendActivity
+                  id: sendActivity_TuTFhl
+                  activity: |-
+                    No worries. You can always ask them a question later here...
+                    https://ztsolutions.io/contact-us
+
+                - kind: SendActivity
+                  id: sendActivity_SNvtjl
+                  activity: Or ask me another question right here...

@@ -1,0 +1,10 @@
+<botcomponent schemaname="crf4c_devCopilot.topic.ZTS-Whatisyourname">
+  <componenttype>9</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>ZTS - What is your name?</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

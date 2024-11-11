@@ -1,0 +1,10 @@
+<botcomponent schemaname="crf4c_devCopilot.topic.MyfirstZTAsteps">
+  <componenttype>9</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>ZTS - My first ZTA steps</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

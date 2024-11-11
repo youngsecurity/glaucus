@@ -1,0 +1,45 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName: Define ZT for me
+    triggerQueries:
+      - define zero trust for me
+      - high level zero trust
+      - meaning Zero Trust
+      - does zero trust mean zero trust?
+      - what is the simplest definition of zero trust though?
+      - what is zero trust?
+      - does zero trust mean no trust?
+
+  actions:
+    - kind: SendActivity
+      id: Ystyaa
+      activity:
+        text:
+          - Ooh exciting question. Nobody knows... only you can decide Luke! Just joking... it's actually quite a simple definition we've settled on at ZTsolutions after many many hours of debate with customers...
+          - Great question - it's the reason we are here - to help organisations understand what is zero trust. As a freebie...
+          - This is actually often misunderstood. We try to keep it as simple as possible...
+
+    - kind: SendActivity
+      id: 6Jn5pw
+      activity:
+        text:
+          - |-
+            Zero Trust does not mean no trust. It means start from no default trust, and build trust where it is merited so that business can function with least risk and least chance of compromise. 
+            
+            We summarize it as moving from the old way "Trust but Verify" to the new way of "**Verify then Trust, then Keep Verifying**"
+          - |-
+            You might have heard "never trust, always verify". That's John Kindervag's motto. At ZTS, we prefer to apply it in two steps: 
+            
+            1) Verify then Trust;
+            2) Then Keep Verifying
+          - |-
+            Our ZTsolutions definition is as simple as moving from the old "trust but verify" way we have been building architectures to...
+            
+            **Verify then Trust, then Keep Verifying.**
+
+    - kind: BeginDialog
+      id: Dj0B0N
+      dialog: crf4c_devCopilot.topic.EndofConversationdraft

@@ -1,0 +1,26 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - zt maturity
+      - zero trust maturity assessment
+      - assess my maturity
+      - find out my zero trust starting point
+      - startling line for zero trust
+
+  actions:
+    - kind: Question
+      id: question_Y1AseN
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.moreinfo
+      prompt: Do you want to know what a ZTS maturity assessment comprises?
+      entity:
+        kind: ClosedListEntityReference
+        entityId: crf4c_devCopilot.entity.YesNo
+        selectedItems:
+          - g4yodD
+          - kzds9i

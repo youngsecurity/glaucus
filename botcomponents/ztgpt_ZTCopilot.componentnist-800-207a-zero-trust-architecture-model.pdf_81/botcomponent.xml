@@ -1,0 +1,21 @@
+<botcomponent schemaname="ztgpt_ZTCopilot.componentnist-800-207a-zero-trust-architecture-model.pdf_81">
+  <componenttype>14</componenttype>
+  <description>NIST SP (Special Publication) 800-207A is a Zero Trust Architecture Model for Access Control in Cloud-Native Applications in Multi-Location Environments.
+ 
+How to Cite this NIST Technical Series Publication:
+Chandramouli R, Butcher Z (2023) A Zero-Trust Architecture Model for Access Control in Cloud-Native
+Applications in Multi-Location Environments. (National Institute of Standards and Technology, Gaithersburg, MD),
+NIST Special Publication (SP) NIST SP 800-207A. https://doi.org/10.6028/NIST.SP.800-207A
+
+## Abstract 
+
+One of the basic tenets of zero trust is to remove the implicit trust in users, services, and devices based only on their network location, affiliation, and ownership. NIST Special Publication 800- 207 has laid out a comprehensive set of zero trust principles and referenced zero trust architectures (ZTA) for turning those concepts into reality. A key paradigm shift in ZTAs is the change in focus from security controls based on segmentation and isolation using network parameters (e.g., Internet Protocol (IP) addresses, subnets, perimeter) to identities. From an application security point of view, this requires authentication and authorization policies based on application and service identities in addition to the underlying network parameters and user identities. This in turn requires a platform that consists of Application Programming Interface (API) gateways, sidecar proxies, and application identity infrastructures (e.g., Secure Production Identity Framework for Everyone [SPIFFE]) that can enforce those policies irrespective of the location of the services or applications, whether on-premises or on multiple clouds. The objective of this publication is to provide guidance for realizing an architecture that can enforce granular application-level policies while meeting the runtime requirements of ZTA for multicloud and hybrid environments. Keywords egress gateway; identity-tier policies; ingress gateway; microservices; multi-cloud; network-tier policies; service mesh; sidecar proxy; SPIFFE; transit gateway; zero trust; zero trust architecture.</description>
+  <filedata mimetype="application/pdf">nist-800-207a-zero-trust-architecture-model.pdf</filedata>
+  <iscustomizable>1</iscustomizable>
+  <name>nist-800-207a-zero-trust-architecture-model.pdf</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

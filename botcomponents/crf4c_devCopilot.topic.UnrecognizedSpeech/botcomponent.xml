@@ -1,0 +1,11 @@
+<botcomponent schemaname="crf4c_devCopilot.topic.UnrecognizedSpeech">
+  <componenttype>9</componenttype>
+  <description>Triggered when the user's speech input cannot be recognized.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Speech unrecognized</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

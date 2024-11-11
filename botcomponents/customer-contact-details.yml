@@ -1,0 +1,62 @@
+kind: AdaptiveDialog
+modelDescription: "This tool can handle queries like these: Collect contact details."
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - lead generation contact details
+      - how can I contact you for lead generation
+      - get in touch for lead generation
+      - lead gen contact info
+      - contact details for leads
+      - reach out about generating leads
+      - need help with lead generation contacts
+      - contact information for generating leads
+
+  actions:
+    - kind: Question
+      id: question_x73klr
+      interruptionPolicy:
+        allowInterruption: true
+
+      unrecognizedPrompt: I did not catch that. Would you like to be contacted by a ZTS consultant?
+      repeatCount: 0
+      variable: init:Topic.Var1
+      prompt: Would you like to be contacted by a ZTS consultant? 
+      entity:
+        kind: ClosedListEntityReference
+        entityId: crf4c_devCopilot.entity.YesNo
+        selectedItems:
+          - g4yodD
+          - kzds9i
+
+    - kind: ConditionGroup
+      id: conditionGroup_xt7hLu
+      conditions:
+        - id: conditionItem_ex3KLq
+          condition: =Topic.Var1 = 'crf4c_devCopilot.entity.YesNo'.g4yodD
+          actions:
+            - kind: Question
+              id: Xm86VX
+              interruptionPolicy:
+                allowInterruption: true
+                interruptionTopicListFilter:
+                  kind: IncludeSelectedTopics
+                  allowedInterruptTopics:
+                    - crf4c_devCopilot.topic.Goodbye
+
+              unrecognizedPrompt: Retry prompt
+              repeatCount: 0
+              variable: Topic.ContactDetails
+              prompt: Please provide your name, email address, and a brief description of your request.
+              entity: StringPrebuiltEntity
+
+            - kind: BeginDialog
+              id: 0KpnVe
+              dialog: crf4c_devCopilot.topic.EndofConversation
+
+      elseActions:
+        - kind: BeginDialog
+          id: tHKbph
+          dialog: crf4c_devCopilot.topic.EndofConversation

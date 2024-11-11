@@ -1,0 +1,10 @@
+<botcomponent schemaname="crf4c_devCopilot.entity.ZTHighleveldefinition">
+  <componenttype>11</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>ZT High level definition</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

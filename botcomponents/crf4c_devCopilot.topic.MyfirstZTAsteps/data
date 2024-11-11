@@ -1,0 +1,53 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName: my first ZTA steps (Copy)
+    triggerQueries:
+      - how do i build a ZTA?
+      - what's the best first step to building a zero trust architecture?
+      - lay out a zero trust strategy for me
+      - zero trust first step
+      - ZT first step
+      - ZTA first step
+
+  actions:
+    - kind: SendActivity
+      id: qvduia
+      activity: "You're starting a Zero Trust journey!? - Exciting times... Well let me give you a good starting point:"
+
+    - kind: SendActivity
+      id: sendActivity_8dEBbx
+      activity: |-
+        1. Define what zero trust is to you
+        2. Scope what you are trying to protect
+        3. Evaluate which zero trust design patterns will best fit your business
+        4. See what you already have that can build those patterns into reality
+        5. If you need help, contact ZTsolutions... this is our mission - to help you to understand and build zero trust architectures for your business. 
+
+    - kind: Question
+      id: LbWwpD
+      alwaysPrompt: true
+      variable: init:Topic.contactDecision
+      prompt: Would you like a meeting with a ZTsolutions consultant to discuss what this means for you?
+      entity:
+        kind: ClosedListEntityReference
+        entityId: crf4c_devCopilot.entity.consultantcontact
+        selectedItems:
+          - ZVj67H
+          - N10zjg
+
+    - kind: ConditionGroup
+      id: HE6JRU
+      conditions:
+        - id: 1QMrFE
+          condition: =Topic.contactDecision = 'crf4c_devCopilot.entity.consultantcontact'.ZVj67H
+          actions:
+            - kind: SendActivity
+              id: sendActivity_MBtdaE
+              activity: Visit our contact us page to set up a meeting... https://ztsolutions.io/contact-us
+
+    - kind: BeginDialog
+      id: mJXqqY
+      dialog: crf4c_devCopilot.topic.EndofConversationdraft

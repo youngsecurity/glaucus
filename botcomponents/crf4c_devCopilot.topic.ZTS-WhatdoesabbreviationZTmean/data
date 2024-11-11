@@ -1,0 +1,26 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - what is zt?
+      - define zt for me?
+      - explain the abbreviation ZT?
+
+  actions:
+    - kind: SendActivity
+      id: sendActivity_WwdLx0
+      activity:
+        text:
+          - |-
+            Ahh good question - lots of people use this without explaining it... ZT is just short for Zero Trust.
+            
+            Zero Trust is a security framework for verifying if trust is merited before giving trust by establishing a connection.
+          - |-
+            Simple: **ZT = Zero Trust**.
+            
+            And PS if you are wondering... **ZTS = ZTsolutions**, a team of zero trust consultants who can help you Know, Empower and Solve your zero trust journey.
+
+    - kind: EndConversation
+      id: cYVdQN

@@ -1,0 +1,10 @@
+<botcomponent schemaname="ztgpt_ZTCopilot.componentNSTAC_Report-Zero_Trust_and_Trusted_Identity_Management.pdf_1715">
+  <componenttype>14</componenttype>
+  <filedata mimetype="application/pdf">NSTAC_Report-Zero_Trust_and_Trusted_Identity_Management.pdf</filedata>
+  <iscustomizable>1</iscustomizable>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

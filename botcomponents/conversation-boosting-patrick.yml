@@ -1,0 +1,43 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnUnknownIntent
+  id: main
+  priority: -1
+  actions:
+    - kind: SendActivity
+      id: sendActivity_LQGrjZ
+      activity: In boosting.
+
+    - kind: InvokeAIBuilderModelAction
+      id: invokeAIBuilderModelAction_xpfRvC
+      input: {}
+      output:
+        binding:
+          predictionOutput: Topic.randomisedWait
+
+      aIModelId: 5ab146ec-2eeb-48f5-a983-ed594385c7d7
+
+    - kind: SendActivity
+      id: sendActivity_4UBphF
+      activity: "{Topic.randomisedWait.text}"
+
+    - kind: SearchAndSummarizeContent
+      id: search-content
+      userInput: =System.Activity.Text
+      variable: Topic.Answer
+      moderationLevel: High
+      publicDataSource:
+        sites:
+          - "https://ztsolutions.io"
+
+      sharePointSearchDataSource: {}
+
+    - kind: ConditionGroup
+      id: has-answer-conditions
+      conditions:
+        - id: has-answer
+          condition: =!IsBlank(Topic.Answer)
+          actions:
+            - kind: BeginDialog
+              id: xvlG0r
+              dialog: crf4c_devCopilot.topic.EndofConversation

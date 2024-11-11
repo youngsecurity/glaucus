@@ -1,0 +1,11 @@
+<botcomponent schemaname="crf4c_devCopilot.knowledge.PublicSiteSearchSource.0">
+  <componenttype>16</componenttype>
+  <description>This knowledge source searches information on the web found in https://ztsolutions.io website</description>
+  <iscustomizable>0</iscustomizable>
+  <name>https://ztsolutions.io</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

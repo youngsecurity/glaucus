@@ -1,0 +1,55 @@
+kind: AdaptiveDialog
+startBehavior: CancelOtherTopics
+beginDialog:
+  kind: OnSystemRedirect
+  id: main
+  actions:
+    - kind: InvokeAIBuilderModelAction
+      id: invokeAIBuilderModelAction_8at4jm
+      input: {}
+      output:
+        binding:
+          predictionOutput: Topic.randomisedQuestion
+
+      aIModelId: db617e8d-0801-469b-bfac-190962ba309d
+
+    - kind: Question
+      id: question_1W3CYS
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: Topic.SurveyResponse
+      prompt: "{Topic.randomisedQuestion.text}"
+      entity: BooleanPrebuiltEntity
+
+    - kind: ConditionGroup
+      id: condition-0
+      conditions:
+        - id: condition-0-item-0
+          condition: =Topic.SurveyResponse = true
+          actions:
+            - kind: CSATQuestion
+              id: csat_1
+              conversationOutcome: ResolvedConfirmed
+
+            - kind: InvokeAIBuilderModelAction
+              id: invokeAIBuilderModelAction_uAuUDG
+              input: {}
+              output:
+                binding:
+                  predictionOutput: Topic.shoot
+
+              aIModelId: 92addca6-ed0d-4de0-8608-354de2a34975
+
+            - kind: SendActivity
+              id: sendActivity_It93nW
+              activity: "{Topic.shoot.text}"
+
+      elseActions:
+        - kind: SendActivity
+          id: sendActivity_iGyfbc
+          activity: Thanks for the chat. For more information see https://ztsolutions.io
+
+        - kind: CSATQuestion
+          id: PM68oo
+          conversationOutcome: ResolvedConfirmed

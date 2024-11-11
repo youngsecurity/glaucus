@@ -1,0 +1,10 @@
+<botcomponent schemaname="crf4c_devCopilot.topic.howcanztshelp-linesofbusiness">
+  <componenttype>9</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>ZTS - How can ZTS help - Lines of Business</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

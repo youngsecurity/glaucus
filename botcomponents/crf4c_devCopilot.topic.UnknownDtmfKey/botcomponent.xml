@@ -1,0 +1,11 @@
+<botcomponent schemaname="crf4c_devCopilot.topic.UnknownDtmfKey">
+  <componenttype>9</componenttype>
+  <description>Triggered when a user's dial pad input doesn't match any existing dial pad settings. Global DTMF dial pad configurations are considered before this triggers.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Unknown dial pad press</name>
+  <parentbotid>
+    <schemaname>crf4c_devCopilot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

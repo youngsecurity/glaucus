@@ -1,0 +1,33 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - enter your email
+      - provide email address
+      - share your email
+      - what's your email?
+      - email input needed
+      - please enter your email address
+      - need your email for contact purposes
+      - "input required: email address"
+
+  actions:
+    - kind: Question
+      id: Question_J5oBBt
+      variable: Topic.ContactByZTS
+      prompt: Would you like to be contacted by ZTS?
+      entity: BooleanPrebuiltEntity
+
+    - kind: ConditionGroup
+      id: ConditionGroup_3rd69f
+      conditions:
+        - id: ConditionItem_6CCvkO
+          condition: =Topic.ContactByZTS = true
+          actions:
+            - kind: Question
+              id: Question_yA85Xx
+              variable: Topic.EmailAddress
+              prompt: Please provide your email address.
+              entity: EmailPrebuiltEntity

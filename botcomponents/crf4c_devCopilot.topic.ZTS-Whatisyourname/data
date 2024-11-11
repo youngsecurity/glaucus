@@ -1,0 +1,17 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - what's your name
+      - tell me your name
+      - name please
+      - who are you
+      - may I know your name
+      - what should I call you
+
+  actions:
+    - kind: SendActivity
+      id: SendActivity_prUz6D
+      activity: The name is Zee. As in Zee Tee. My birth certificate says Zero Trust, though... ZT for short
