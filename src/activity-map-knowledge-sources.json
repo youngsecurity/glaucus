@@ -1,0 +1,31 @@
+{
+    "search_result": {
+      "Text": {
+        "CitationSources": [
+          {
+            "Id": "https://ztsolutions.io/empower-identity-access",
+            "Name": "Empower - Identity Access | Zero Trust Solutions",
+            "Text": "Our specialists have a proven record of success in the identity and access management space and customer identity and access management (CIAM) projects relating to strategy, delivery experience or assurance for identity and access management solutions, including one or more of the following areas: ... hello@ztsolutions.io. Stay Connected ...",
+            "Type": "Unknown",
+            "Url": "https://ztsolutions.io/empower-identity-access"
+          },
+          {
+            "Id": "https://ztsolutions.io/",
+            "Name": "Home | Zero Trust Solutions",
+            "Text": "Identity Access; Microsegmentation Engineering; Solve. Solutions. Multi-factor Authentication; Anti-ransomware; ... We provide you with disruptive cyber technologies, equipping you with the best solutions that integrate and improve your security posture. ... hello@ztsolutions.io. Stay Connected; United Kingdom +44 (0)203 196 7832. United States ...",
+            "Type": "Unknown",
+            "Url": "https://ztsolutions.io/"
+          },
+          {
+            "Id": "https://ztsolutions.io/about-us",
+            "Name": "About Us | Zero Trust Solutions",
+            "Text": "Identity Access; Microsegmentation Engineering; Solve. Solutions. Multi-factor Authentication; ... We provide our customers and partners with our knowledge and expertise to adopt a strategy to protect their company and their customers from the evolving threat of cyber-attacks ... hello@ztsolutions.io. Stay Connected; United Kingdom +44 (0)203 ...",
+            "Type": "Unknown",
+            "Url": "https://ztsolutions.io/about-us"
+          }
+        ],
+        "Content": "ztsolutions.io provides information about their expertise in identity and access management (IAM) and customer identity and access management (CIAM) projects. They offer strategy, delivery experience, and assurance for IAM solutions [1]. They also mention providing disruptive cyber technologies to improve security posture [2]​[3].",
+        "MarkdownContent": "ztsolutions.io provides information about their expertise in identity and access management (IAM) and customer identity and access management (CIAM) projects. They offer strategy, delivery experience, and assurance for IAM solutions [1]. They also mention providing disruptive cyber technologies to improve security posture [2]​[3].\n\n[1]: https://ztsolutions.io/empower-identity-access \"Empower - Identity Access | Zero Trust Solutions\"\n[2]: https://ztsolutions.io/ \"Home | Zero Trust Solutions\"\n[3]: https://ztsolutions.io/about-us \"About Us | Zero Trust Solutions\""
+      }
+    }
+  }

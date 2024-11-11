@@ -1,0 +1,54 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnUnknownIntent
+  id: main
+  priority: -1
+  actions:
+    - kind: SendActivity
+      id: sendActivity_LQGrjZ
+      activity: In boosting
+
+    - kind: SendActivity
+      id: sendActivity_pSGTaD
+      activity:
+        text:
+          - Setting up a secure response—almost there!
+          - Securing the digital perimeter, just a moment...
+          - Applying Zero Trust principles to your query—stand by.
+          - Aligning with ZT strategies... response incoming!
+          - One moment while we validate Zero Trust protocols for this answer.
+          - Mapping out micro-segmentation... generating insights.
+          - Finalizing secure access—your answer is on its way!
+          - Deploying ZT model protections for your query... hold tight.
+          - Auditing digital trust levels... response ready soon!
+          - Strengthening network integrity... preparing a secure answer.
+          - Validating user identity and authorization - just one moment please!    
+          - Ensuring data confidentiality and integrity - verifying access permissions.    
+          - Enhancing security through context-aware policies - analyzing request details.    
+          - Applying micro-segmentation for granular control - refining access strategy.    
+          - Implementing continuous monitoring for real-time insights - gathering additional information.    
+          - Securing endpoints with Zero Trust principles - ensuring device compliance.    
+          - Enforcing multi-factor authentication for added protection - validating credentials.    
+          - Optimizing network performance while maintaining security - balancing requirements.    
+          - Collaborating across devices and platforms securely - establishing trust relationships.
+
+    - kind: SearchAndSummarizeContent
+      id: search-content
+      userInput: =System.Activity.Text
+      variable: Topic.Answer
+      moderationLevel: High
+      publicDataSource:
+        sites:
+          - "https://ztsolutions.io"
+
+      sharePointSearchDataSource: {}
+
+    - kind: ConditionGroup
+      id: has-answer-conditions
+      conditions:
+        - id: has-answer
+          condition: =!IsBlank(Topic.Answer)
+          actions:
+            - kind: BeginDialog
+              id: t4yPq3
+              dialog: crf4c_devCopilot.topic.EndofConversationdraft

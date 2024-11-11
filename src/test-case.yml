@@ -1,0 +1,40 @@
+kind: AdaptiveDialog
+modelDescription: This topic is for running tests. Any mention of the words "test case" should trigger this topic.
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent: {}
+  actions:
+    - kind: Question
+      id: question_HlOoPb
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.VarPersonName
+      prompt: What is your name?
+      entity: PersonNamePrebuiltEntity
+
+    - kind: SendActivity
+      id: sendActivity_kBAF4W
+      activity: Thank you, {Topic.VarPersonName}!
+
+    - kind: SendActivity
+      id: sendActivity_3bVsuN
+      activity: "Forcing Topic: Conversation Boosting"
+
+    - kind: Question
+      id: question_G96jud
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.VarUserResponse
+      prompt: "Setup: Provide the prompt to use for Conversation Boosting."
+      entity: StringPrebuiltEntity
+
+    - kind: SendActivity
+      id: sendActivity_wkPUQc
+      activity: "{Topic.VarUserResponse}"
+
+    - kind: BeginDialog
+      id: qMaB20
+      dialog: crf4c_devCopilot.topic.ConversationBoostingdraft
