@@ -12,6 +12,42 @@ beginDialog:
   kind: OnSystemRedirect
   id: main
   actions:
+    - kind: SearchAndSummarizeContent
+      id: KwYmwv
+      displayName: Generate a random phrase asking the user if they have any more questions
+      userInput: Generate a random phrase to be used in a Zero Trust assistant chatbot. The phrase should not use quotes. The phrase should be random and ask the
+      variable: Topic.VarRandomQuestionPhrase
+      moderationLevel: High
+      additionalInstructions: |-
+        Generate a random phrase asking the user if they have any more questions. The phrase will be used for a Zero Trust assistant chatbot asking the user if they have any more questions.
+        
+        Here is a list of examples:
+        - Do you have any additional questions I can help with?
+        - Is there anything else you’d like to know?
+        - Are there more questions on your mind?
+        - Can I assist you with anything further?
+        - Do you need clarification on anything else?
+        - Is there something else you would like to ask?
+        - Do you have any other inquiries?
+        - Would you like to discuss anything further?
+        - Is there anything more I can clarify for you?
+        - Are there any other questions you would like to explore?
+        - Do you have any other inquiries at the moment?
+        - Are there any further concerns or questions I can help address?
+        - Would you like me to clarify anything else for you?
+        - Any additional questions or points of confusion, I would be happy to clear up!
+        - Can I assist with more queries or topics you are curious about?
+        - Still have unanswered questions? Feel free to ask away!
+        - More inquiries on the horizon? I am here to help!
+        - Curious about different aspects of this conversation? No worries, we can explore together!
+      responseCaptureType: TextOnly
+
+    - kind: SendActivity
+      id: sendActivity_tJEeLW
+      activity: |-
+        Break
+        {Topic.VarRandomQuestionPhrase}
+
     - kind: Question
       id: question_GXlSQO
       interruptionPolicy:
@@ -36,7 +72,6 @@ beginDialog:
           - Any additional questions or points of confusion, I would be happy to clear up!
           - Can I assist with more queries or topics you are curious about?
           - Still have unanswered questions? Feel free to ask away!
-          - Want to delve into another topic? Just let me know!
           - More inquiries on the horizon? I am here to help!
           - Curious about different aspects of this conversation? No worries, we can explore together!
 
@@ -80,7 +115,6 @@ beginDialog:
                   - Any additional questions or points of confusion, I would be happy to clear up!
                   - Can I assist with more queries or topics you are curious about?
                   - Still have unanswered questions? Feel free to ask away!
-                  - Want to delve into another topic? Just let me know!
                   - More inquiries on the horizon? I am here to help!
                   - Curious about different aspects of this conversation? No worries, we can explore together!
 
@@ -112,7 +146,6 @@ beginDialog:
                           - I'm prepared to assist—just let me know what you need!
                           - Whenever you're ready, I'm here to answer your questions!
                           - I'm here to help! What questions do you have in mind?
-                          - Your questions are welcome! What would you like to explore next?
                           - Ready for more? I'm here to tackle your next question!
 
               elseActions:
@@ -124,6 +157,29 @@ beginDialog:
                   id: wS3826
 
       elseActions:
+        - kind: SearchAndSummarizeContent
+          id: RepOOk
+          displayName: Generate a random phrase apologizing for not being helpful to the user
+          userInput: Generate a random phrase apologizing for not being able to assist the user and asking if they would like to try again.
+          variable: Topic.VarRandomApologyPhrase
+          moderationLevel: High
+          additionalInstructions: |-
+            Generate a random phrase apologizing for not being able to assist the user and asking if they would like to try again. The phrase will be used for a Zero Trust assistant chatbot. 
+            
+            Here is a list of examples:
+            
+            - I'm really sorry I couldn't help with that. Would you like to give it another shot?
+            - I apologize for not being able to assist you this time. Should we try again?
+            - I regret that I couldn't provide the information you were looking for. Would you like to attempt it once more?
+            - I’m sorry for the inconvenience. If you're open to it, we can try again together!
+            - I apologize for the difficulty. How about we give it another go?
+            - Sorry that I couldn't meet your needs at the moment. Would you like to take another try?
+            - I regret that I wasn't able to assist you as expected. Should we try a different approach?
+            - I’m sorry I couldn’t provide the assistance you needed. Would you like to try asking again?
+            - I apologize for the confusion earlier. Want to give it another attempt?
+            - I'm sorry that I was unable to help you this time. How about we try again?
+          responseCaptureType: TextOnly
+
         - kind: Question
           id: TCtl10
           alwaysPrompt: true
