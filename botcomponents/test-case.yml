@@ -1,5 +1,5 @@
 kind: AdaptiveDialog
-modelDescription: This topic is for running tests. Any mention of the words "test case" should trigger this topic.
+modelDescription: This topic is for running tests. Any mention of the words, "test", "test case", or "test framework" should trigger this topic.
 beginDialog:
   kind: OnRecognizedIntent
   id: main
@@ -37,4 +37,4 @@ beginDialog:
 
     - kind: BeginDialog
       id: cSQafL
-      dialog: crf4c_devCopilot.topic.Search
+      dialog: crcee_zeeTee.topic.Search
